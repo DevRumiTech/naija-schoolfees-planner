@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://devrumitech.github.io/naija-schoolfees-planner/sitemap.xml
