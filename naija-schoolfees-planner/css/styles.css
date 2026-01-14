@@ -1,0 +1,277 @@
+/* =========================
+   CSS RESET & VARIABLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --radius: 14px;
+    --transition: 0.3s ease;
+  
+    /* Naija Identity */
+    --naija-green: #008753;
+  
+    /* Light Theme */
+    --bg-light: #f8fafc;
+    --card-light: #ffffff;
+    --text-light: #0f172a;
+    --muted-light: #64748b;
+    --primary: #2563eb; /* trust blue */
+    --border-light: #e2e8f0;
+  
+    /* Dark Theme */
+    --bg-dark: #020617;
+    --card-dark: #0f172a;
+    --text-dark: #e5e7eb;
+    --muted-dark: #94a3b8;
+    --border-dark: #1e293b;
+  }
+  
+  /* =========================
+     BASE
+  ========================= */
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    transition: background var(--transition), color var(--transition);
+  }
+  
+  body.theme-light {
+    background: var(--bg-light);
+    color: var(--text-light);
+  }
+  
+  body.theme-dark {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: auto;
+    padding: 1.2rem;
+  }
+  
+  /* =========================
+     HEADER
+  ========================= */
+  
+  .site-header {
+    border-bottom: 3px solid var(--naija-green);
+  }
+  
+  body.theme-light .site-header {
+    background: #fff;
+  }
+  
+  body.theme-dark .site-header {
+    background: #020617;
+  }
+  
+  .header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 700;
+  }
+  
+  .logo span {
+    color: var(--naija-green);
+  }
+  
+  .logo img {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .theme-controls button {
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  /* =========================
+     ADS
+  ========================= */
+  
+  .ad {
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.75;
+    margin: 1.2rem 0;
+  }
+  
+  .ad-top,
+  .ad-mid,
+  .ad-footer {
+    padding: 0.8rem;
+    border-radius: var(--radius);
+    border: 1px dashed var(--naija-green);
+  }
+  
+  /* =========================
+     INTRO
+  ========================= */
+  
+  .intro h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .intro p {
+    color: var(--muted-light);
+  }
+  
+  body.theme-dark .intro p {
+    color: var(--muted-dark);
+  }
+  
+  /* =========================
+     CALCULATOR
+  ========================= */
+  
+  .calculator-card {
+    background: var(--card-light);
+    padding: 1.6rem;
+    border-radius: var(--radius);
+    margin-top: 1.5rem;
+    border: 1px solid var(--border-light);
+  }
+  
+  body.theme-dark .calculator-card {
+    background: var(--card-dark);
+    border-color: var(--border-dark);
+  }
+  
+  .calculator-card h2 {
+    margin-bottom: 0.8rem;
+    color: var(--naija-green);
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    margin-bottom: 0.9rem;
+  }
+  
+  input,
+  select {
+    margin-top: 0.3rem;
+    padding: 0.6rem;
+    border-radius: var(--radius);
+    border: 1px solid;
+    font-size: 0.95rem;
+  }
+  
+  body.theme-light input,
+  body.theme-light select {
+    border-color: var(--border-light);
+  }
+  
+  body.theme-dark input,
+  body.theme-dark select {
+    background: #020617;
+    color: var(--text-dark);
+    border-color: var(--border-dark);
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 0.6rem;
+  }
+  
+  button {
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .btn-primary {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius);
+  }
+  
+  .btn-primary:hover {
+    opacity: 0.9;
+  }
+  
+  .btn-secondary {
+    background: transparent;
+    border: 1px solid var(--naija-green);
+    color: var(--naija-green);
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius);
+  }
+  
+  /* =========================
+     RESULTS
+  ========================= */
+  
+  .results {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: var(--radius);
+    border: 2px solid var(--naija-green);
+  }
+  
+  /* =========================
+     CONTENT / FAQ / TRUST
+  ========================= */
+  
+  .content,
+  .faq,
+  .trust {
+    margin-top: 2rem;
+  }
+  
+  .content h2,
+  .faq h2,
+  .trust h2 {
+    color: var(--naija-green);
+  }
+  
+  .content ul {
+    margin-left: 1.2rem;
+  }
+  
+  details {
+    margin-bottom: 0.6rem;
+  }
+  
+  /* =========================
+     FOOTER
+  ========================= */
+  
+  .site-footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.85rem;
+    opacity: 0.85;
+  }
+  
+  /* =========================
+     RESPONSIVE
+  ========================= */
+  
+  @media (max-width: 600px) {
+    .form-actions {
+      flex-direction: column;
+    }
+  }
+  
